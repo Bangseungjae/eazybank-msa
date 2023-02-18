@@ -15,9 +15,9 @@ public class SecurityConfig {
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
         http.authorizeExchange(exchanges -> exchanges.pathMatchers("/eazybank/accounts/**").authenticated()
-                .pathMatchers("/eazybank/loans/**").authenticated()
-                .pathMatchers("/eazybank/cards/**").permitAll())
-                .oauth2Login(Customizer.withDefaults());
+                        .pathMatchers("/eazybank/loans/**").authenticated()
+                        .pathMatchers("/eazybank/cards/**").permitAll())
+                .oauth2ResourceServer().jwt();
         http.csrf().disable();
         return http.build();
     }

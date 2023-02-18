@@ -14,7 +14,7 @@
 	<name>gatewayserver</name>
 	<description>Spring Boot project for Spring Cloud Gateway</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 		<spring-cloud.version>2021.0.5</spring-cloud.version>
 	</properties>
 	<dependencies>
@@ -56,7 +56,15 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-oauth2-client</artifactId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-oauth2-resource-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-oauth2-jose</artifactId>
 		</dependency>
 
 		<dependency>

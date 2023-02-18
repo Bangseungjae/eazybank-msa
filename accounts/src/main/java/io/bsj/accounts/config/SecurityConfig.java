@@ -7,19 +7,19 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.web.SecurityFilterChain;
 
-@Configuration
-@EnableWebSecurity
+//@Configuration
+//@EnableWebSecurity
 public class SecurityConfig {
 
-    @Bean
-    public SecurityFilterChain web(HttpSecurity http) throws Exception {
-        JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
-        jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(new KeycloakRoleConverter());
-
-        http.authorizeRequests(authorize -> authorize.antMatchers("/sayHello").hasRole("ACCOUNTS")
-                .anyRequest().authenticated())
-                .oauth2ResourceServer().jwt().jwtAuthenticationConverter(jwtAuthenticationConverter);
-        http.csrf().disable();
-        return http.build();
-    }
+//    @Bean
+//    public SecurityFilterChain web(HttpSecurity http) throws Exception {
+//        JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
+//        jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(new KeycloakRoleConverter());
+//
+//        http.authorizeRequests(authorize -> authorize.antMatchers("/sayHello").hasRole("ACCOUNTS")
+//                .anyRequest().authenticated())
+//                .oauth2ResourceServer().jwt().jwtAuthenticationConverter(jwtAuthenticationConverter);
+//        http.csrf().disable();
+//        return http.build();
+//    }
 }
