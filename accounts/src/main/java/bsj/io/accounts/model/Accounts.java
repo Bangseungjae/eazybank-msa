@@ -1,4 +1,4 @@
-package bsj.io.accounts;
+package bsj.io.accounts.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
