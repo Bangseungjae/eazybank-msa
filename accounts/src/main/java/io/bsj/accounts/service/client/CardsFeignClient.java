@@ -3,7 +3,6 @@ package io.bsj.accounts.service.client;
 import io.bsj.accounts.model.Cards;
 import io.bsj.accounts.model.Customer;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
